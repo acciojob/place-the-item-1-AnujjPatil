@@ -4,10 +4,65 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<style>
+		body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex Container */
+.holder {
+    display: flex;
+    justify-content: space-between; /* Ensures space between items, first & last touch edges */
+    flex-wrap: wrap; /* ✅ Allows items to move to next row if they don’t fit */
+    gap: 10px; /* Optional - adds consistent spacing when wrapping */
+    padding: 20px;
+}
+
+/* Flex Items */
+.item {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+/* Colors for visual clarity */
+#item1 { background-color: #e3342f; }  /* red */
+#item2 { background-color: blue; }
+#item3, #item4, #item5, #item6, #item7 {
+    background-color: #2d7b2d; /* green */
+}
+
+	</style>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
+	<h1 class="text-2xl font-bold mb-4">Flexbox Wrap and Spacing Example</h1>
+    
+    <!-- This is the container where all the flex properties are applied -->
+    <div class="holder">
+        <!-- Items 3, 4, 5, 6, 7 are green -->
+        <div class="item" style="background-color: darkgreen;">3</div>
+        <div class="item" style="background-color: darkgreen;">4</div>
+        <div class="item" style="background-color: darkgreen;">5</div>
+        <div class="item" style="background-color: darkgreen;">6</div>
+        <div class="item" style="background-color: darkgreen;">7</div>
+        
+        <!-- Item 1 is red -->
+        <div class="item" style="background-color: red; border-right: none;">1</div>
+        
+        <!-- Item 2 is blue and wraps to the next line -->
+        <div class="item" style="background-color: blue; border-right: none;">2</div>
+        
+        <!-- Add a few more items to ensure wrapping works correctly -->
+        
+        
+    </div>
     <script type="text/javascript" src="./script.js">
 </script>
 
